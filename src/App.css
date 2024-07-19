@@ -3,4 +3,65 @@ html,body{
     width: 100%;
     background: rgb(0,0,0);
     background: linear-gradient(45deg, rgba(0,0,0,1) 42%, rgba(41,36,36,1) 78%, rgba(94,94,94,1) 100%);
+    overflow-x: hidden;
+}
+ul{
+    animation: from-left ease-in both;
+    animation-timeline: view();
+    animation-range:entry 50%;
+    animation-delay: 5s;
+}
+li{
+    font-size: clamp(20px,4vw,30px);
+}
+#footer-text1{
+    transform: translateY(-150%);
+}
+#footer-logo{
+    object-position: center;
+    align-self: center;
+    animation: zoom ease-in both;
+    animation-timeline: view();
+    animation-range: entry 10%;
+}
+#footer div{
+    border-right: 1px solid whitesmoke;
+}
+#footer{
+    animation: zoom ease both;
+    animation-timeline: view();
+    animation-range:entry 0;
+}
+@keyframes zoom {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes from-left {
+    from{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@media screen and (width<1000px){
+   #footer div{
+        border-bottom: 1px solid whitesmoke;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (width<850px){
+    #footer-logo{
+        transform: translateX(-20%);
+    }
 }
