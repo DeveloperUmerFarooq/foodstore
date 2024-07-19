@@ -11,7 +11,7 @@ export default function Footer() {
               <p className='fs-1' id='footer-text1'>Order the food you want!</p>
               </center>
           </div>
-          <div className='col-lg'>
+          <div className='col-lg border-0'>
               <center>
               <h1>Services we provide</h1>
               </center><br/>
