@@ -6,13 +6,18 @@ html,body{
     overflow-x: hidden;
 }
 ul{
-    animation: from-left ease-in both;
+    transition: 1s ease;
+    animation: fade-in ease-in both;
     animation-timeline: view();
     animation-range:entry 50%;
     animation-delay: 5s;
 }
 li{
-    font-size: clamp(20px,4vw,30px);
+    font-size: clamp(20px, 4vw, 30px);
+}
+form{
+    position: relative;
+    top: -9vh;
 }
 #footer-text1{
     transform: translateY(-150%);
@@ -32,6 +37,21 @@ li{
     animation-timeline: view();
     animation-range:entry 0;
 }
+.Pizza div{
+    animation: zoom ease-in both;
+    animation-timeline: view();
+    animation-range: entry 30%;
+}
+.Burger div{
+   animation: from-left ease-in both;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.Fries div{
+    animation: from-bottom ease-in both;
+    animation-timeline: view();
+    animation-range: entry 0;
+} 
 @keyframes zoom {
     from{
         opacity: 0;
@@ -52,6 +72,25 @@ li{
         transform: translateX(0%);
     }
 }
+@keyframes from-bottom {
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 @media screen and (width<1000px){
    #footer div{
         border-bottom: 1px solid whitesmoke;

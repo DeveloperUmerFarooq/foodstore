@@ -11,7 +11,7 @@ export default function Footer() {
               <p className='fs-1' id='footer-text1'>Order the food you want!</p>
               </center>
           </div>
-          <div className='col-lg border-0'>
+          <div className='col-lg border-0 p-2'>
               <center>
               <h1>Services we provide</h1>
               </center><br/>
@@ -24,7 +24,7 @@ export default function Footer() {
               </ul>
           </div>
         </div>
-        <div className=' h-25 fs-3 text-light bg-gradient'>
+        <div className=' h-25 fs-6 text-light bg-gradient'>
           <center>
             &copy;<span>Copytight! All rights reserves since 2024</span>
           </center>

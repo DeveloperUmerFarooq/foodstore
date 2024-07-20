@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Navbar({sign=false}) {
+export default function Navbar({sign=true,admin=false,count=0}) {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-black z-3 w-100">
@@ -20,12 +20,13 @@ export default function Navbar({sign=false}) {
               <Link className='nav-link bg-dark-subtle p-2 rounded-3' to="/signup">SignUp</Link>
             </div>}
             {sign &&<div className='d-flex gap-3'>
-              <Link className='nav-link bg-dark-subtle p-2 px-3 rounded-3 position-relative' to="/cart">
+              {!admin&&<Link className='nav-link bg-dark-subtle p-2 px-3 rounded-3 position-relative' to="/cart">
                 <i className="fa-solid fa-cart-shopping"></i>
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  1
-                </span>
-              </Link>
+               {(count>0)&&<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {count}
+                </span>}
+              </Link>}
+              {admin&&<Link className='nav-link bg-dark-subtle p-2 rounded-3 align-self-center'>Add Items </Link>}
               <Link className='nav-link bg-dark-subtle p-2 rounded-3 align-self-center' to="/signup">Log Out</Link>
             </div>}
           </div>
