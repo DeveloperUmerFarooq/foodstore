@@ -27,15 +27,15 @@ form{
     align-self: center;
     animation: zoom ease-in both;
     animation-timeline: view();
-    animation-range: entry 10%;
+    animation-range: entry 0;
 }
 #footer div{
     border-right: 1px solid whitesmoke;
 }
-#footer{
-    animation: zoom ease both;
+#foter{
+    animation: fade-in ease both;
     animation-timeline: view();
-    animation-range:entry 0;
+    animation-range:entry 20%;
 }
 .Pizza div{
     animation: zoom ease-in both;
@@ -52,6 +52,14 @@ form{
     animation-timeline: view();
     animation-range: entry 0;
 } 
+#modal{
+    position: absolute;
+    top: 10%;
+    right: 1.5%;
+    z-index: 10;
+    text-wrap: wrap;
+    animation: zoom ease-in;
+}
 @keyframes zoom {
     from{
         opacity: 0;

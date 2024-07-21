@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <>
-      <div className=' container-fluid bg-black p-0'>
+      <div className=' container-fluid bg-black pt-3 p-0' id='foter'>
         <div className='row text-light' id='footer'>
           <div className='col-lg position-relative d-flex flex-column'>
               <center>
@@ -24,7 +24,7 @@ export default function Footer() {
               </ul>
           </div>
         </div>
-        <div className=' h-25 fs-6 text-light bg-gradient'>
+        <div className=' h-25 fs-6 text-light bg-dark p-2'>
           <center>
             &copy;<span>Copytight! All rights reserves since 2024</span>
           </center>

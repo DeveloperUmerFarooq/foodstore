@@ -17,11 +17,11 @@ function App() {
     },
     {
       path:"/login",
-      element:<><Navbar/><Login/><Footer/></>
+      element:<><Navbar/><Login/></>
     },
     {
       path:"/signup",
-      element:<><Navbar/><SignUp/><Footer/></>
+      element:<><Navbar/><SignUp/></>
     },
     {
       path:"/order",
