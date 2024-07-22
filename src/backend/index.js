@@ -1,18 +1,19 @@
 const express = require("express")
 const mongoose= require("mongoose")
-const {port,URL} = require("./config.js")
+const {port} = require("./config.js")
+const {Mongo}=require("./mongodb.js")
+const food_items = require('./foodItemsSchema.js')
+const Catagory=require('./catagorySchema.js')
+const User=require('./userSchema.js')
 const cors=require("cors")
 const app = express()
-
 app.use(express.json())
 app.use(cors())
-mongoose.connect(URL).
-then(()=>{
-    console.log("database connected")
-    app.listen(port,()=>{
-        console.log(`server is listening at port:${port}`)
-    })
-})
-.catch((error)=>{
-    console.log(`connection Failed due to${error} `);
+
+food_items.findOne({}).then(res=>console.log(res.options[0].large)).catch(err=>console.log(err))
+User.findOne({admin:true}).then(res=>console.log(res)).catch(err=>console.log(err))
+food_items.find({CategoryName:"Pizza"}).then(res=>console.log(res)).catch(err=>console.log(err))
+app.listen(port,()=>{
+    Mongo
+    console.log("Server is listening")
 })
