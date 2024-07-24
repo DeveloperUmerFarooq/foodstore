@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar({ sign = true, admin = false, count = 0 }) {
   const [modal, setModal] = useState(false);
-  useEffect(()=>{
-    document.addEventListener('onscroll',()=>{
-      setModal(false)
-    })
-  })
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-black z-3 w-100">
@@ -34,12 +30,12 @@ export default function Navbar({ sign = true, admin = false, count = 0 }) {
               </Link>}
               {admin && <Link className='nav-link bg-dark-subtle p-2 rounded-3 align-self-center'>Add Items </Link>}
               <Link className='nav-link bg-dark-subtle p-2 rounded-3 align-self-center' to="/login">Log Out</Link>
-              <div className=' rounded-circle bg-dark-subtle fs-5 p-2' style={{'cursor':"pointer"}}><i class="fa-solid fa-user" onClick={() => setModal(true)}></i></div>
+              <div className=' rounded-circle bg-dark-subtle fs-5 p-2 nav-link' style={{'cursor':"pointer"}} onClick={() => setModal(!modal)}><i className="fa-solid fa-user"></i></div>
             </div>}
           </div>
         </div>
       </nav>
-      {modal&& <div className='p-3 bg-dark text-light rounded' id='modal'>
+      {modal&& <div className='p-3 bg-black text-light rounded shadow-lg border-light-subtle rounded-4' id='modal'>
           <p>Username: Umer</p>
           <p>Email: umerfarooq1122@gmail.com</p>
           <button className='btn btn-danger mx-1' onClick={()=>setModal(false)}>Close</button>

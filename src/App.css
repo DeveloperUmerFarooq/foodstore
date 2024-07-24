@@ -1,8 +1,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(45deg, rgba(0,0,0,1) 42%, rgba(41,36,36,1) 78%, rgba(94,94,94,1) 100%);
+    background-color: rgb(12, 12, 12) !important;
     overflow-x: hidden;
 }
 ul{
@@ -52,13 +51,24 @@ form{
     animation-timeline: view();
     animation-range: entry 0;
 } 
+.Others div{
+    animation: fade-in ease both;
+    animation-timeline: view();
+    animation-range: entry 50%;
+    transform: 0.3s ease-in;
+}
+label{
+    font-size: clamp(15px, 4vw, 25px);
+}
 #modal{
-    position: absolute;
+    position:absolute;
     top: 10%;
     right: 1.5%;
     z-index: 10;
     text-wrap: wrap;
-    animation: zoom ease-in;
+    user-select: none;
+    touch-action: none;
+    animation: zoom ease-in 0.2s;
 }
 @keyframes zoom {
     from{
