@@ -1,8 +1,9 @@
 const express = require("express")
 const bcrypt=require("bcrypt")
 const User = require("../models/userSchema")
+const jwt=require('jsonwebtoken')
 const route=express.Router();
-
+const jwtSecret="HelloFromFoodies"
 route.post('/signup',async (req,res)=>{
     const {name,email,Pass}=await req.body
     const salt=await bcrypt.genSalt(10)
@@ -17,6 +18,7 @@ route.post('/signup',async (req,res)=>{
                     email:email,
                     password:newPass
                 })
+
                 res.send(true)
             }
     })
@@ -25,12 +27,22 @@ route.post('/signup',async (req,res)=>{
 
 route.get('/login',(req,res)=>{
         const {email,pass}=req.query
-        User.findOne({email:email}).then(user=>{
-            if(bcrypt.compare(pass,user.password)){     
-                res.send(true)
-            }else{
-                res.send(false)
-            }
+        User.findOne({email:email}).then(async user=>{
+            if(user){
+                let cmp=await bcrypt.compare(pass,user.password)
+                if(cmp){
+                    const data={
+                        userData:{
+                            id:user.id
+                        }
+                    }
+                    const tokken=jwt.sign(data,jwtSecret)
+                    return res.json({success:true,authTokken:tokken})
+                }
+                else{
+                    return res.json({success:false,message:"Incorrect Password"})
+                }
+            }else return res.json({success:false,message:"User not found"})
         })
 })
 

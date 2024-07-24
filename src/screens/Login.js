@@ -6,7 +6,6 @@ export default function Login() {
   const [email,setEmail]=useState("")
   const [pass,setPass]=useState("")
   const navigate=useNavigate()
-  console.log(email,pass)
   const handleOnSubmit=(e)=>{
         e.preventDefault()
         if(email===""|| pass===""){
@@ -18,10 +17,11 @@ export default function Login() {
             axios.get("http://localhost:5000/login",{
               params: { email, pass }
             }).then(res=>{
-              if(res.data){
+              if(res.data.success){
+                localStorage.setItem("authTokken",res.data.authTokken)
                 navigate("/")
               }else{
-                alert("user not found")
+                alert(res.data.message)
               }
             })
           }
