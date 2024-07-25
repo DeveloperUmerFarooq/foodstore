@@ -6,13 +6,13 @@ export default function Carousel() {
             <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="images/Burger.jpg" height={600} className="d-block w-100" alt="..."/>
+                        <img src="images/Burger.jpg" height={500} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src="images/Pizza.jpg" height={600} className="d-block w-100" alt="..."/>
+                        <img src="images/Pizza.jpg" height={500} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src="images/Fries.jpg" height={600} className="d-block w-100" alt="..."/>
+                        <img src="images/Fries.jpg" height={500} className="d-block w-100" alt="..."/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">

@@ -8,7 +8,6 @@ import Footer from './components/Footer.js';
 import Login from './screens/Login.js';
 import SignUp from './screens/SignUp.js';
 import Orders from './screens/Orders.js';
-import { useEffect } from 'react';
 function App() {
 
   const router = createBrowserRouter([

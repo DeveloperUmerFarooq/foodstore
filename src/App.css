@@ -37,29 +37,30 @@ form{
     animation-range:entry 20%;
 }
 .Pizza div{
-    animation: zoom ease-in both;
+    animation: zoom ease-in;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.Burger div{
+   animation: from-left ease-in;
     animation-timeline: view();
     animation-range: entry 30%;
 }
-.Burger div{
-   animation: from-left ease-in both;
-    animation-timeline: view();
-    animation-range: entry 0;
-}
 .Fries div{
-    animation: from-bottom ease-in both;
+    animation: from-bottom linear both;
     animation-timeline: view();
-    animation-range: entry 0;
+    animation-range: entry 10%;
 } 
 .Others div{
     animation: fade-in ease both;
     animation-timeline: view();
-    animation-range: entry 50%;
+    animation-range: entry 30%;
     transform: 0.3s ease-in;
 }
 label{
     font-size: clamp(15px, 4vw, 25px);
 }
+
 #modal{
     position:absolute;
     top: 10%;
@@ -69,6 +70,10 @@ label{
     user-select: none;
     touch-action: none;
     animation: zoom ease-in 0.2s;
+}
+.card img{
+    aspect-ratio: 3/2;
+    object-fit:fill ;
 }
 @keyframes zoom {
     from{
@@ -113,6 +118,9 @@ label{
    #footer div{
         border-bottom: 1px solid whitesmoke;
         margin-bottom: 20px;
+    }
+    .Pizza div,.Burger div,.Fries div,.Others div{
+            animation-range: entry 0;
     }
 }
 

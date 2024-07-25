@@ -18,8 +18,11 @@ export default function Login() {
               params: { email, pass }
             }).then(res=>{
               if(res.data.success){
+                if(res.data.admin){
+                  localStorage.setItem("admin",res.data.admin)
+                }
                 localStorage.setItem("authTokken",res.data.authTokken)
-                navigate("/")
+                navigate("/",{state:{email:email}})
               }else{
                 alert(res.data.message)
               }
