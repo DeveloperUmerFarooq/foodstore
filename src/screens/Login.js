@@ -22,7 +22,7 @@ export default function Login() {
                   localStorage.setItem("admin",res.data.admin)
                 }
                 localStorage.setItem("authTokken",res.data.authTokken)
-                navigate("/",{state:{email:email}})
+                navigate("/",{state:{email:email,name:res.data.user}})
               }else{
                 alert(res.data.message)
               }

@@ -37,24 +37,24 @@ form{
     animation-range:entry 20%;
 }
 .Pizza div{
-    animation: zoom ease-in;
+    animation: zoom ease-in both;
     animation-timeline: view();
-    animation-range: entry 0;
+    animation-range: entry;
 }
 .Burger div{
-   animation: from-left ease-in;
+   animation: from-left ease-in both;
     animation-timeline: view();
     animation-range: entry 30%;
 }
 .Fries div{
     animation: from-bottom linear both;
     animation-timeline: view();
-    animation-range: entry 10%;
+    animation-range: entry;
 } 
 .Others div{
     animation: fade-in ease both;
     animation-timeline: view();
-    animation-range: entry 30%;
+    animation-range: entry ;
     transform: 0.3s ease-in;
 }
 label{
@@ -70,6 +70,11 @@ label{
     user-select: none;
     touch-action: none;
     animation: zoom ease-in 0.2s;
+    border: 1px solid rgb(71, 70, 70);
+    box-shadow: 2px 2px 20px 2px white,-2px -2px 20px 2px red;
+}
+#filter{
+    animation: from-left 0.4s ease-in ;
 }
 .card img{
     aspect-ratio: 3/2;
@@ -128,5 +133,8 @@ label{
 @media screen and (width<850px){
     #footer-logo{
         transform: translateX(-20%);
+    }
+    #modal{
+        position: fixed;
     }
 }

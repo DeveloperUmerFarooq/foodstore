@@ -37,7 +37,7 @@ route.get('/login',(req,res)=>{
                         }
                     }
                     const tokken=jwt.sign(data,jwtSecret)
-                    return res.json({success:true,authTokken:tokken,admin:user.admin})
+                    return res.json({success:true,authTokken:tokken,admin:user.admin,user:user.name})
                 }
                 else{
                     return res.json({success:false,message:"Incorrect Password"})

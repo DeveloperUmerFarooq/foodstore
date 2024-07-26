@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import axios from 'axios'
 
-export default function Items() {
+export default function Items({search=""}) {
   const [items, setItems] = useState([])
   const [catagory, setCatagory] = useState([])
+  console.log(search)
   useEffect(() => {
     axios.get("http://localhost:5000/items").then(result => {
       if (result) {
@@ -19,7 +20,8 @@ export default function Items() {
   return (
     <>
       <div className='container-fluid mb-5 mx-4' id='items'>
-        {catagory.map((elem)=>(
+
+        {(search==="")?catagory.map((elem)=>(
                 <div key={elem._id}>
                 <h1 className=' fs-1 text-decoration-underline text-light' >{elem.CategoryName}</h1><br /><hr />
                 <div className={`${elem.CategoryName} mb-5 row`} key={elem.id}>
@@ -29,9 +31,13 @@ export default function Items() {
                 }
                 </div>
               </div>
-        ))
-
-        }    
+        )):<div className="mb-5 row" id="filter">
+        {
+          items.filter((item)=>{return item.name.toLowerCase().includes(search.toLowerCase())}).map((item,i)=><Card key={i} items={item}/>
+          )
+        }
+        </div>
+        }   
       </div>
     </>
   )
