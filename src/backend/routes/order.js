@@ -1,7 +1,7 @@
-const express = require("express")
-const route=express.Router();
-const User = require("../models/userSchema")
-const Order= require('../models/orderSchema')
+const express= require('express')
+const Order = require('../models/ordersSchema')
+
+const route=express.Router()
 route.post("/checkout",async (req,res)=>{
    let [email,data,total]= await [req.body.email,req.body.data,req.body.total]
    console.log(data)
