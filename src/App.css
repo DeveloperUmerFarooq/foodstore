@@ -63,12 +63,12 @@ label{
 
 #modal{
     position:absolute;
+    width: 300px;
     top: 10%;
     right: 1.5%;
     z-index: 10;
     text-wrap: wrap;
     user-select: none;
-    touch-action: none;
     animation: zoom ease-in 0.2s;
     border: 1px solid rgb(71, 70, 70);
     box-shadow: 2px 2px 20px 2px white,-2px -2px 20px 2px red;
@@ -79,6 +79,23 @@ label{
 .card img{
     aspect-ratio: 3/2;
     object-fit:fill ;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    width: 99%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 100;
+}
+
+#cart{
+    top: 20%;
+    animation: zoom ease-in-out 0.4s;
+}
+#btn-close{
+    right:2rem;
 }
 @keyframes zoom {
     from{
@@ -127,6 +144,9 @@ label{
     .Pizza div,.Burger div,.Fries div,.Others div{
             animation-range: entry 0;
     }
+    .overlay{
+        width: 100%;
+    }
 }
 
 
@@ -136,5 +156,13 @@ label{
     }
     #modal{
         position: fixed;
+        top: 50%;
+    }
+    #btn-close{
+        right:-6%;
+    }
+    #cart{
+        top: 50%;
+        width: clamp(300px, 50%, 800px);
     }
 }

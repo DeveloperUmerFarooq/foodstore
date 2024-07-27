@@ -5,7 +5,6 @@ import axios from 'axios'
 export default function Items({search=""}) {
   const [items, setItems] = useState([])
   const [catagory, setCatagory] = useState([])
-  console.log(search)
   useEffect(() => {
     axios.get("http://localhost:5000/items").then(result => {
       if (result) {

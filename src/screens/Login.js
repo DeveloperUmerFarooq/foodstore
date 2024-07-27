@@ -22,7 +22,8 @@ export default function Login() {
                   localStorage.setItem("admin",res.data.admin)
                 }
                 localStorage.setItem("authTokken",res.data.authTokken)
-                navigate("/",{state:{email:email,name:res.data.user}})
+                localStorage.setItem("userdetals",JSON.stringify({ email: email, name: res.data.user }))
+                navigate("/")
               }else{
                 alert(res.data.message)
               }

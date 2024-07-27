@@ -8,6 +8,7 @@ import Footer from './components/Footer.js';
 import Login from './screens/Login.js';
 import SignUp from './screens/SignUp.js';
 import Orders from './screens/Orders.js';
+import { CartProvider } from './components/ContextReducer.js';
 function App() {
 
   const router = createBrowserRouter([
@@ -31,7 +32,10 @@ function App() {
   )
   return (
     <>
+    <CartProvider>
      <RouterProvider router={router}/>
+    </CartProvider>
+    
     </>
   );
 }
