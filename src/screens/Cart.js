@@ -2,6 +2,7 @@ import React from 'react'
 import { useCart, useDispatch } from '../components/ContextReducer'
 import axios from 'axios'
 
+
 export default function Cart() {
     const data = useCart()
     const creds=JSON.parse(localStorage.getItem("userdetals"))
@@ -11,13 +12,17 @@ export default function Cart() {
         await dispatch({type:"remove",index:id})
     }
     const checkout=async ()=>{
-        try{
-            await axios.post("http://localhost:5000/checkout",{email,data,total});
-            window.location.reload();         
-        }catch(err){
-            alert("req Failed")
-        }
+        await axios.post("http://localhost:5000/checkout",{email,data,total}).then(res=>{
+            console.log(res.data)
+            if(res.data){
+                dispatch({type:"remAll"})
+            }
+            else{
+                alert("request failed")
+            }
+        })            
     }
+            
     let total = 0;
 data.forEach(item => {
   total += item.price;
@@ -42,7 +47,7 @@ data.forEach(item => {
                             {
                                data.map((item, i) => (
                                     <>
-                                        <tr>
+                                        <tr key={i}>
                                             <th scope='row'>{i + 1}</th>
                                             <td>{item.name}</td>
                                             <td>{item.quantity}</td>

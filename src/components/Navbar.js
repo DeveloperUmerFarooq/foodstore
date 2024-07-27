@@ -16,6 +16,7 @@ export default function Navbar() {
     localStorage.removeItem("userdetals")
     setModal(false)
     navigate('/login')
+    window.location.reload()
   }
   const closeCart = () => {
     setCart(false)
