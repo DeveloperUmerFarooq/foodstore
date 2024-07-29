@@ -25,11 +25,11 @@ export default function Card({items}) {
   return (
     <>
     
-          <div className="card col-3 p-0 m-2 bg-transparent text-light border-1 border-dark" style={{ 'width': '20rem' }}>
-            <img src={items.img} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h3 className="card-title">{items.name}</h3>
-              <p className='fs-6'>{items.description}</p><br/>
+          <div className="card col-3 p-0 m-2 bg-transparent text-light border-1 border-dark justify-content-evenly" style={{ 'width': '20rem' }}>
+            <img src={items.img} loading='lazy' className="card-img-top" alt="..." />
+            <div className="card-body d-flex flex-column">
+              <h3 className="card-title flex-grow-1">{items.name}</h3><br/>
+              <p className='fs-6 text-start'>{items.description}</p><br/>
               <div className='row'>
               <select name='type' id='type' className=' form-select bg-success-subtle w-50 mx-auto fs-6 col-2' 
               onChange={(e)=>{

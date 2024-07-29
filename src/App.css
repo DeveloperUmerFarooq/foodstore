@@ -97,6 +97,10 @@ label{
 #btn-close{
     right:2rem;
 }
+#order-none{
+    height: 100%;
+}
+
 @keyframes zoom {
     from{
         opacity: 0;
@@ -152,7 +156,7 @@ label{
 
 @media screen and (width<850px){
     #footer-logo{
-        transform: translateX(-20%);
+        transform: translateX(-13.5%);
     }
     #modal{
         position: fixed;

@@ -11,12 +11,12 @@ const orderSchema = new mongoose.Schema({
         required:true
     },
     total:{
-        type:Number,
+        type:Array,
         required:true
     },
     Date:{
-        type:Date,
-        default:Date.now()
+        type:[Date],
+        default:[Date.now()]
     }
 })
 const Order = mongoose.model("Orders", orderSchema)

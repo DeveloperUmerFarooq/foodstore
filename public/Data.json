@@ -2,102 +2,280 @@
     {
         "CategoryName": "Pizza",
         "name": "Pepperoni Pizza",
-        "img": "https://images.unsplash.com/photo-1592347019370-8e7a6f5e277e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.pizzaexpress.com/media/1234/pepperoni-pizza.jpg",
         "options": [
-            {
-                "regular":150,
-                "medium": 250,
-                "large": 350
-            }
+            {"regular": 150, "medium": 250, "large": 350}
         ],
         "description": "Delicious pizza topped with pepperoni and mozzarella cheese."
     },
     {
         "CategoryName": "Pizza",
         "name": "Margarita Pizza",
-        "img": "https://images.unsplash.com/photo-1572295444962-4c1c4e0a2ab5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.dominos.com/media/1234/margarita-pizza.jpg",
         "options": [
-            {
-                "regular": 120,
-                "medium": 220,
-                "large": 320
-            }
+            {"regular": 120, "medium": 220, "large": 320}
         ],
         "description": "Classic pizza with fresh mozzarella, tomatoes, and basil."
     },
     {
+        "CategoryName": "Pizza",
+        "name": "BBQ Chicken Pizza",
+        "img": "https://www.papajohns.com/media/5678/bbq-chicken-pizza.jpg",
+        "options": [
+            {"regular": 160, "medium": 270, "large": 370}
+        ],
+        "description": "Pizza topped with BBQ chicken, onions, and cilantro."
+    },
+    {
+        "CategoryName": "Pizza",
+        "name": "Veggie Supreme Pizza",
+        "img": "https://www.cicis.com/media/2345/veggie-supreme-pizza.jpg",
+        "options": [
+            {"regular": 140, "medium": 250, "large": 360}
+        ],
+        "description": "Loaded with bell peppers, mushrooms, and olives."
+    },
+    {
+        "CategoryName": "Pizza",
+        "name": "Hawaiian Pizza",
+        "img": "https://www.littlecaesars.com/media/3456/hawaiian-pizza.jpg",
+        "options": [
+            {"regular": 130, "medium": 240, "large": 340}
+        ],
+        "description": "A tropical pizza with ham and pineapple."
+    },
+    {
+        "CategoryName": "Pizza",
+        "name": "Four Cheese Pizza",
+        "img": "https://www.pizzahut.com/media/4567/four-cheese-pizza.jpg",
+        "options": [
+            {"regular": 170, "medium": 290, "large": 400}
+        ],
+        "description": "A cheesy delight with mozzarella, cheddar, parmesan, and gorgonzola."
+    },
+    {
+        "CategoryName": "Pizza",
+        "name": "Meat Lovers Pizza",
+        "img": "https://www.pizza.com/media/5678/meat-lovers-pizza.jpg",
+        "options": [
+            {"regular": 180, "medium": 300, "large": 420}
+        ],
+        "description": "Packed with various meats like sausage, bacon, and pepperoni."
+    },
+    {
+        "CategoryName": "Pizza",
+        "name": "Pesto Pizza",
+        "img": "https://www.pizzamaking.com/media/6789/pesto-pizza.jpg",
+        "options": [
+            {"regular": 140, "medium": 250, "large": 360}
+        ],
+        "description": "Pizza with pesto sauce, sun-dried tomatoes, and goat cheese."
+    },
+    {
+        "CategoryName": "Pizza",
+        "name": "Buffalo Chicken Pizza",
+        "img": "https://www.pizzahut.com/media/7890/buffalo-chicken-pizza.jpg",
+        "options": [
+            {"regular": 160, "medium": 280, "large": 380}
+        ],
+        "description": "Spicy buffalo chicken with ranch dressing."
+    },
+    {
         "CategoryName": "Burger",
         "name": "Cheese Burger",
-        "img": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.burgerking.com/media/1234/cheese-burger.jpg",
         "options": [
-            {
-                "single": 150,
-                "double": 200
-            }
+            {"single": 150, "double": 200}
         ],
         "description": "Juicy burger topped with melted cheese, lettuce, and tomato."
     },
     {
         "CategoryName": "Burger",
         "name": "Veggie Burger",
-        "img": "https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.fiveguys.com/media/5678/veggie-burger.jpg",
         "options": [
-            {
-                "single": 130,
-                "double": 180
-            }
+            {"single": 130, "double": 180}
         ],
         "description": "A healthy alternative with a delicious veggie patty and fresh veggies."
     },
     {
+        "CategoryName": "Burger",
+        "name": "Bacon Burger",
+        "img": "https://www.in-n-out.com/media/2345/bacon-burger.jpg",
+        "options": [
+            {"single": 160, "double": 220}
+        ],
+        "description": "Burger with crispy bacon strips and cheddar cheese."
+    },
+    {
+        "CategoryName": "Burger",
+        "name": "BBQ Burger",
+        "img": "https://www.shakeshack.com/media/3456/bbq-burger.jpg",
+        "options": [
+            {"single": 170, "double": 230}
+        ],
+        "description": "Burger with BBQ sauce, onion rings, and cheddar cheese."
+    },
+    {
+        "CategoryName": "Burger",
+        "name": "Mushroom Swiss Burger",
+        "img": "https://www.redrobin.com/media/4567/mushroom-swiss-burger.jpg",
+        "options": [
+            {"single": 180, "double": 240}
+        ],
+        "description": "Burger topped with sautéed mushrooms and Swiss cheese."
+    },
+    {
+        "CategoryName": "Burger",
+        "name": "Spicy Jalapeño Burger",
+        "img": "https://www.hamburgerhelper.com/media/5678/spicy-jalapeno-burger.jpg",
+        "options": [
+            {"single": 150, "double": 210}
+        ],
+        "description": "Burger with spicy jalapeños and pepper jack cheese."
+    },
+    {
+        "CategoryName": "Burger",
+        "name": "Greek Burger",
+        "img": "https://www.culvers.com/media/6789/greek-burger.jpg",
+        "options": [
+            {"single": 150, "double": 200}
+        ],
+        "description": "Burger with feta cheese, olives, and tzatziki sauce."
+    },
+    {
+        "CategoryName": "Burger",
+        "name": "Buffalo Burger",
+        "img": "https://www.zaxbys.com/media/7890/buffalo-burger.jpg",
+        "options": [
+            {"single": 175, "double": 225}
+        ],
+        "description": "Burger with spicy buffalo sauce and blue cheese crumbles."
+    },
+    {
         "CategoryName": "Fries",
         "name": "French Fries",
-        "img": "https://images.unsplash.com/photo-1571997478779-2b6f85f0d796?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.wendys.com/media/1234/french-fries.jpg",
         "options": [
-            {
-                "small": 50,
-                "medium": 80,
-                "large": 120
-            }
+            {"small": 50, "medium": 80, "large": 120}
         ],
         "description": "Crispy and golden French fries, seasoned to perfection."
     },
     {
         "CategoryName": "Fries",
         "name": "Cheese Fries",
-        "img": "https://images.unsplash.com/photo-1612201117996-0384d5e19eec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.arbys.com/media/5678/cheese-fries.jpg",
         "options": [
-            {
-                "small": 70,
-                "medium": 100,
-                "large": 150
-            }
+            {"small": 70, "medium": 100, "large": 150}
         ],
         "description": "French fries topped with melted cheese and herbs."
     },
     {
+        "CategoryName": "Fries",
+        "name": "Sweet Potato Fries",
+        "img": "https://www.popeyes.com/media/2345/sweet-potato-fries.jpg",
+        "options": [
+            {"small": 60, "medium": 90, "large": 130}
+        ],
+        "description": "Crispy sweet potato fries with a hint of cinnamon."
+    },
+    {
+        "CategoryName": "Fries",
+        "name": "Loaded Fries",
+        "img": "https://www.checkers.com/media/3456/loaded-fries.jpg",
+        "options": [
+            {"small": 90, "medium": 120, "large": 170}
+        ],
+        "description": "French fries loaded with cheese, bacon, and green onions."
+    },
+    {
+        "CategoryName": "Fries",
+        "name": "Curly Fries",
+        "img": "https://www.jackinthebox.com/media/4567/curly-fries.jpg",
+        "options": [
+            {"small": 55, "medium": 85, "large": 125}
+        ],
+        "description": "Spiraled fries with a seasoned coating."
+    },
+    {
+        "CategoryName": "Fries",
+        "name": "Garlic Parmesan Fries",
+        "img": "https://www.mcdonalds.com/media/5678/garlic-parmesan-fries.jpg",
+        "options": [
+            {"small": 70, "medium": 100, "large": 140}
+        ],
+        "description": "French fries with a garlic parmesan seasoning."
+    },
+    {
+        "CategoryName": "Fries",
+        "name": "Chili Cheese Fries",
+        "img": "https://www.fiveguys.com/media/6789/chili-cheese-fries.jpg",
+        "options": [
+            {"small": 80, "medium": 110, "large": 150}
+        ],
+        "description": "Fries topped with chili and melted cheese."
+    },
+    {
+        "CategoryName": "Fries",
+        "name": "Poutine",
+        "img": "https://www.harveys.com/media/7890/poutine.jpg",
+        "options": [
+            {"small": 90, "medium": 130, "large": 180}
+        ],
+        "description": "Fries covered with gravy and cheese curds."
+    },
+    {
         "CategoryName": "Others",
         "name": "Garlic Bread",
-        "img": "https://images.unsplash.com/photo-1579884252686-4a15b0b4e727?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.olivegarden.com/media/1234/garlic-bread.jpg",
         "options": [
-            {
-                "half": 80,
-                "full": 140
-            }
+            {"half": 80, "full": 140}
         ],
         "description": "Toasted bread with garlic butter and herbs."
     },
     {
         "CategoryName": "Others",
         "name": "Onion Rings",
-        "img": "https://images.unsplash.com/photo-1567872234977-d3b7d0ec1917?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "img": "https://www.redlobster.com/media/5678/onion-rings.jpg",
         "options": [
-            {
-                "small": 70,
-                "medium": 110,
-                "large": 150
-            }
+            {"small": 70, "medium": 110, "large": 150}
         ],
         "description": "Crispy onion rings served with a side of dipping sauce."
+    },
+    {
+        "CategoryName": "Others",
+        "name": "Bruschetta",
+        "img": "https://www.pastaandco.com/media/2345/bruschetta.jpg",
+        "options": [
+            {"small": 70, "medium": 100, "large": 140}
+        ],
+        "description": "Toasted bread topped with tomato, basil, and garlic."
+    },
+    {
+        "CategoryName": "Others",
+        "name": "Chicken Tenders",
+        "img": "https://www.applebees.com/media/3456/chicken-tenders.jpg",
+        "options": [
+            {"small": 90, "medium": 130, "large": 170}
+        ],
+        "description": "Crispy chicken tenders with a side of dipping sauce."
+    },
+    {
+        "CategoryName": "Others",
+        "name": "Quesadillas",
+        "img": "https://www.chilis.com/media/4567/quesadillas.jpg",
+        "options": [
+            {"small": 80, "medium": 120, "large": 160}
+        ],
+        "description": "Flour tortillas stuffed with cheese and served with salsa."
+    },
+    {
+        "CategoryName": "Others",
+        "name": "Nachos",
+        "img": "https://www.tacobell.com/media/5678/nachos.jpg",
+        "options": [
+            {"small": 90, "medium": 130, "large": 180}
+        ],
+        "description": "Tortilla chips topped with cheese, jalapenos, and sour cream."
     }
 ]

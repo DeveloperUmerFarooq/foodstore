@@ -6,12 +6,12 @@ route.post("/checkout",async (req,res)=>{
    let [email,data,total]= await [req.body.email,req.body.data,req.body.total]
     Order.findOne({email:email}).then(user=>{
         if(user){
-            Order.findOneAndUpdate({email:email},{$push:{order:data}}).then(res.send(true))
+            Order.findOneAndUpdate({email:email},{$push:{order:data,Date:Date.now(),total:total}}).then(res.send(true))
         }else{
             Order.create({
                 email:email,
                 order:[data],
-                total:total
+                total:[total]
             }
             ).then(res.send(true))
         }
@@ -20,8 +20,15 @@ route.post("/checkout",async (req,res)=>{
 route.post("/order",(req,res)=>{
     let email=req.body.email
     Order.findOne({email:email}).then((order)=>{
-        let data=order.order
-        res.send(data)
+        if(order){
+            let data=order.order
+            let date=order.Date
+            let total=order.total
+            res.send([data,date,total])
+        }
+        else{
+            res.send(false)
+        }
     })
 })
 module.exports=route
